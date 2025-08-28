@@ -1,5 +1,6 @@
 import "../instrument.mjs"
 import express from 'express'
+import * as Sentry from "@sentry/node";
 import { ENV } from './config/env.js'
 import { connectDB } from './config/db.js'
 import {clerkMiddleware} from '@clerk/express'
@@ -7,7 +8,7 @@ import { serve } from "inngest/express";
 import { functions, inngest } from './config/inngest.js'
 import chatRoutes from './routes/chat.route.js'
 
-import * as Sentry from "@sentry/node";
+
 
 const app = express()
 app.use(express.json())  //Aloows acces to req.body
