@@ -49,7 +49,7 @@ const CreateChannelModal = ({ onClose }) => {
     fetchUsers();
   }, [client]);
 
-  // reset the form on open: this is not needed, we just deleted it later in the video
+  // reset the form on open: this is not needed, I just deleted it later in the video
   // useEffect(() => {
   //   setChannelName("");
   //   setDescription("");
