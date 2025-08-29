@@ -7,11 +7,13 @@ import {clerkMiddleware} from '@clerk/express'
 import { serve } from "inngest/express";
 import { functions, inngest } from './config/inngest.js'
 import chatRoutes from './routes/chat.route.js'
+import cors from 'cors'
 
 
 
 const app = express()
 app.use(express.json())  //Aloows acces to req.body
+app.use(cors({origin: "http://localhost:5173", credentials: true}))
 app.use(clerkMiddleware()) //req.auth will be available in req object
 
 app.get("/debug-sentry", (req, res) => {
