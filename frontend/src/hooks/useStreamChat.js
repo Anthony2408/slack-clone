@@ -24,7 +24,7 @@ export const useStreamChat = () => {
     queryKey: ["streamToken"],
     queryFn: getStreamToken,
     enabled: !!user?.id, // this will take the object and convert it to a boolean
-  });
+  })
 
   // init stream chat client
   // init stream chat client
